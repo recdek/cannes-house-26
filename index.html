@@ -116,7 +116,7 @@ button { font-family: var(--f-body); cursor: pointer; border: none; background: 
 }
 .gn-text { white-space: nowrap; }
 .gn-icon {
-  height: 2em;
+  height: 6em;
   width: auto;
   object-fit: contain;
   transition: filter var(--tf);
@@ -1367,7 +1367,7 @@ footer {
       <div class="sec-hd reveal">
         <span class="label">Château Saint George</span>
         <h2 class="sec-title">Private. Prestigious.<br>Singular in Cannes.</h2>
-        <p class="sec-sub">Nestled in Cannes La Californie — the city's most exclusive residential quarter — the château is not a hotel, not a festival venue. It is a private estate, with all that implies.</p>
+        <p class="sec-sub">Nestled in Cannes La Californie — the city's most exclusive residential quarter — the château is not a hotel, not a festival venue. It is a private estate, with French charm and elegance.</p>
       </div>
       <div class="chateau-grid">
         <div class="cg-cell tall reveal">
@@ -1468,24 +1468,6 @@ footer {
       <span class="proof-brand"><img src="img/Netflix_2015_logo.svg" alt="Netflix" class="proof-logo"></span>
     </div>
     <div class="proof-names">
-      <span class="proof-name">Madonna</span>
-      <span class="proof-name">Brad Pitt</span>
-      <span class="proof-name">Jennifer Lawrence</span>
-      <span class="proof-name">Natalie Portman</span>
-      <span class="proof-name">Pedro Pascal</span>
-      <span class="proof-name">Ben Stiller</span>
-      <span class="proof-name">Heidi Klum</span>
-      <span class="proof-name">John Travolta</span>
-    </div>
-  </div>
-
-  <!-- SELECTIVITY -->
-  <div class="select-cta reveal">
-    <span class="label">Selectivity</span>
-    <h2>Not every inquiry<br>becomes a partnership.</h2>
-    <div class="btn-row">
-      <button class="btn-dk" onclick="show('sponsorship')">Sponsorship Opportunities</button>
-      <button class="btn-lt" onclick="show('hosting')">Private Hosting</button>
     </div>
   </div>
 
@@ -1505,26 +1487,29 @@ footer {
       <span class="label">Partner Inquiry</span>
       <h2>A Private Introduction<br>Starts Here</h2>
       <p>All inquiries are reviewed confidentially. We respond personally within 48 hours.</p>
-      <div class="inq-form">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Company">
-        <input type="email" placeholder="Email" class="full" style="grid-column:span 2">
-        <select>
+      <form class="inq-form" action="https://formsubmit.co/ed@recdek.com" method="POST">
+        <input type="hidden" name="_subject" value="New Partner Inquiry — Cannes 2026">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://cannes.recdek.com">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="company" placeholder="Company">
+        <input type="email" name="email" placeholder="Email" class="full" style="grid-column:span 2" required>
+        <select name="interest">
           <option value="" disabled selected>Interest</option>
           <option>Brand Sponsorship</option>
           <option>Private Hosting</option>
           <option>Both</option>
         </select>
-        <input type="text" placeholder="Preferred Dates (if applicable)">
-        <textarea class="full" placeholder="Tell us briefly about your interest and timeline."></textarea>
-        <button class="sub-btn">Submit Inquiry</button>
-      </div>
+        <input type="text" name="dates" placeholder="Preferred Dates (if applicable)">
+        <textarea class="full" name="message" placeholder="Tell us briefly about your interest and timeline."></textarea>
+        <button type="submit" class="sub-btn">Submit Inquiry</button>
+      </form>
       <p class="inq-note">info@recdek.com</p>
     </div>
   </section>
 
   <footer>
-    <a href="https://recdek.com" target="_blank" rel="noopener"><img src="img/RecDek_House_Logo.png" alt="RecDek House" style="height:28px;width:auto;opacity:0.52;"></a>
+    <a href="https://recdek.com" target="_blank" rel="noopener"><img src="img/RecDek_House_Logo.png" alt="RecDek House" style="height:112px;width:auto;opacity:0.52;"></a>
     <div class="ft-links">
       <a href="#" onclick="show('sponsorship');return false">Sponsorship</a>
       <a href="#" onclick="show('hosting');return false">Hosting</a>
@@ -1743,11 +1728,14 @@ footer {
       <span class="label">Sponsorship Inquiry</span>
       <h2>Let's Discuss<br>a Partnership</h2>
       <p>Share your brand and what you're looking for. We'll respond personally with a tailored sponsorship overview.</p>
-      <div class="inq-form">
-        <input type="text" placeholder="Brand Name">
-        <input type="text" placeholder="Contact Name">
-        <input type="email" placeholder="Email" class="full" style="grid-column:span 2">
-        <select>
+      <form class="inq-form" action="https://formsubmit.co/ed@recdek.com" method="POST">
+        <input type="hidden" name="_subject" value="New Sponsorship Inquiry — Cannes 2026">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://cannes.recdek.com">
+        <input type="text" name="brand" placeholder="Brand Name" required>
+        <input type="text" name="contact" placeholder="Contact Name" required>
+        <input type="email" name="email" placeholder="Email" class="full" style="grid-column:span 2" required>
+        <select name="category">
           <option value="" disabled selected>Partnership Category</option>
           <option>Champagne &amp; Spirits</option>
           <option>Beauty &amp; Fragrance</option>
@@ -1758,16 +1746,16 @@ footer {
           <option>Hospitality</option>
           <option>Other</option>
         </select>
-        <input type="text" placeholder="Estimated Budget Range (optional)">
-        <textarea class="full" placeholder="What are you hoping to achieve through this partnership?"></textarea>
-        <button class="sub-btn">Submit Sponsorship Inquiry</button>
-      </div>
+        <input type="text" name="budget" placeholder="Estimated Budget Range (optional)">
+        <textarea class="full" name="message" placeholder="What are you hoping to achieve through this partnership?"></textarea>
+        <button type="submit" class="sub-btn">Submit Sponsorship Inquiry</button>
+      </form>
       <p class="inq-note">info@recdek.com</p>
     </div>
   </section>
 
   <footer>
-    <a href="https://recdek.com" target="_blank" rel="noopener"><img src="img/RecDek_House_Logo.png" alt="RecDek House" style="height:28px;width:auto;opacity:0.52;"></a>
+    <a href="https://recdek.com" target="_blank" rel="noopener"><img src="img/RecDek_House_Logo.png" alt="RecDek House" style="height:112px;width:auto;opacity:0.52;"></a>
     <div class="ft-links">
       <a href="#" onclick="show('partners');return false">← All Partners</a>
       <a href="#" onclick="show('hosting');return false">Private Hosting</a>
@@ -2028,11 +2016,14 @@ footer {
       <span class="label">Hosting Inquiry</span>
       <h2>Reserve Your<br>Date in Cannes</h2>
       <p>Tell us about your event. We'll confirm availability and arrange a private conversation.</p>
-      <div class="inq-form">
-        <input type="text" placeholder="Organisation / Company">
-        <input type="text" placeholder="Contact Name">
-        <input type="email" placeholder="Email" class="full" style="grid-column:span 2">
-        <select>
+      <form class="inq-form" action="https://formsubmit.co/ed@recdek.com" method="POST">
+        <input type="hidden" name="_subject" value="New Hosting Inquiry — Cannes 2026">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://cannes.recdek.com">
+        <input type="text" name="organisation" placeholder="Organisation / Company" required>
+        <input type="text" name="contact" placeholder="Contact Name" required>
+        <input type="email" name="email" placeholder="Email" class="full" style="grid-column:span 2" required>
+        <select name="format">
           <option value="" disabled selected>Event Format</option>
           <option>Private Dinner</option>
           <option>Cocktail Reception</option>
@@ -2043,17 +2034,17 @@ footer {
           <option>Full Day / Multi-Day</option>
           <option>Other</option>
         </select>
-        <input type="number" placeholder="Estimated Guest Count">
-        <input type="text" placeholder="Preferred Date(s) — May 12–18" class="full" style="grid-column:span 2">
-        <textarea class="full" placeholder="Brief description of your event and any specific requirements."></textarea>
-        <button class="sub-btn">Request Hosting Availability</button>
-      </div>
+        <input type="number" name="guests" placeholder="Estimated Guest Count">
+        <input type="text" name="dates" placeholder="Preferred Date(s) — May 12–18" class="full" style="grid-column:span 2">
+        <textarea class="full" name="message" placeholder="Brief description of your event and any specific requirements."></textarea>
+        <button type="submit" class="sub-btn">Request Hosting Availability</button>
+      </form>
       <p class="inq-note">info@recdek.com</p>
     </div>
   </section>
 
   <footer>
-    <a href="https://recdek.com" target="_blank" rel="noopener"><img src="img/RecDek_House_Logo.png" alt="RecDek House" style="height:28px;width:auto;opacity:0.52;"></a>
+    <a href="https://recdek.com" target="_blank" rel="noopener"><img src="img/RecDek_House_Logo.png" alt="RecDek House" style="height:112px;width:auto;opacity:0.52;"></a>
     <div class="ft-links">
       <a href="#" onclick="show('partners');return false">← All Partners</a>
       <a href="#" onclick="show('sponsorship');return false">Sponsorship</a>
@@ -2064,14 +2055,7 @@ footer {
 </div>
 
 <script>
-// SYNC NAV ICON HEIGHT TO TEXT
-(function() {
-  var icon = document.querySelector('.gn-icon');
-  var text = document.querySelector('.gn-text');
-  function sync() { if (icon && text) icon.style.height = text.offsetHeight + 'px'; }
-  sync();
-  window.addEventListener('resize', sync);
-})();
+// NAV ICON — no height sync, sized via CSS
 
 // PAGE ROUTING
 function show(id) {
